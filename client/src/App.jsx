@@ -6,11 +6,11 @@ import Home from './routes/Home'
 
 const App = () => {
     return <div>
-    <Router>
+    <Router basename='/'>
         <Routes>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/restaurants/:id/update" component={Updatepage}/>
-            <Route exact path="/restaurants/:id" component={RestaurantdetailPage}/>
+            <Route path="*" element={<Home />}/>
+            <Route exact path="restaurants/:id/update" component={<Updatepage />}/>
+            <Route exact path="restaurants/:id" component={<RestaurantdetailPage />}/>
        </Routes>
     </Router>
     </div>
